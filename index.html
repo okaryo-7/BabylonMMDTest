@@ -120,7 +120,7 @@
                 };
                 const promises = [];
                 const bvmdLoader = new BABYLONMMD.BvmdLoader(scene);
-                promises.push(bvmdLoader.loadAsync("motion", "https://noname0310.github.io/web-mmd-viewer/melancholic_night/mmd_public/motion/melancholy_night/motion.bvmd", (event) => updateLoadingText(0, `Loading motion... ${event.loaded}/${event.total} (${Math.floor(event.loaded * 100 / event.total)}%)`)));
+                promises.push(bvmdLoader.loadAsync("motion", "roki.bvmd", (event) => updateLoadingText(0, `Loading motion... ${event.loaded}/${event.total} (${Math.floor(event.loaded * 100 / event.total)}%)`)));
                 promises.push(BABYLON.SceneLoader.ImportMeshAsync(undefined, "SakamataChloe.pmx", undefined, scene, event => updateLoadingText(1, `Loading model... ${event.loaded}/${event.total} (${Math.floor(event.loaded * 100 / event.total)}%)`)));
                 promises.push((async () => {
                     updateLoadingText(2, "Loading physics engine...");
