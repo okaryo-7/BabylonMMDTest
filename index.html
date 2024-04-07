@@ -107,7 +107,7 @@
                 mmdRuntime.register(scene);
                 const audioPlayer = new BABYLONMMD.StreamAudioPlayer(scene);
                 audioPlayer.preservesPitch = false;
-                audioPlayer.source = "https://noname0310.github.io/web-mmd-viewer/melancholic_night/mmd_public/motion/melancholy_night/melancholy_night.mp3";
+                audioPlayer.source = "roki.mp3";
                 mmdRuntime.setAudioPlayer(audioPlayer);
                 mmdRuntime.playAnimation();
                 const mmdPlayerControl = new BABYLONMMD.MmdPlayerControl(scene, mmdRuntime, audioPlayer);
@@ -122,7 +122,7 @@
                 const bvmdLoader = new BABYLONMMD.BvmdLoader(scene);
                 promises.push(bvmdLoader.loadAsync("motion", "roki.bvmd", (event) => updateLoadingText(0, `Loading motion... ${event.loaded}/${event.total} (${Math.floor(event.loaded * 100 / event.total)}%)`)));
                 promises.push(BABYLON.SceneLoader.ImportMeshAsync(undefined, "SakamataChloe.pmx", undefined, scene, event => updateLoadingText(1, `Loading model... ${event.loaded}/${event.total} (${Math.floor(event.loaded * 100 / event.total)}%)`)));
-                alert("reading");
+                //alert("reading");
                 promises.push((async () => {
                     updateLoadingText(2, "Loading physics engine...");
                     const havokPlugin = new BABYLON.HavokPlugin();
