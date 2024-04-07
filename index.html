@@ -107,7 +107,7 @@
                 mmdRuntime.register(scene);
                 const audioPlayer = new BABYLONMMD.StreamAudioPlayer(scene);
                 audioPlayer.preservesPitch = false;
-                audioPlayer.source = "roki.mp3";
+                audioPlayer.source = "roki.wav";
                 mmdRuntime.setAudioPlayer(audioPlayer);
                 mmdRuntime.playAnimation();
                 const mmdPlayerControl = new BABYLONMMD.MmdPlayerControl(scene, mmdRuntime, audioPlayer);
