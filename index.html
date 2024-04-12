@@ -199,6 +199,9 @@
                 textblock.verticalAlignment = BABYLON.GUI.Control.VERTICAL_ALIGNMENT_TOP;
                 textblock.color = "black";
                 advancedTexture.addControl(textblock);
+
+                const xr = scene.createDefaultXRExperienceAsync();
+                
                 return scene;
             }
         }
