@@ -200,8 +200,8 @@
                 textblock.color = "black";
                 advancedTexture.addControl(textblock);
 
-                const xr = scene.createDefaultXRExperienceAsync();
                 
+
                 return scene;
             }
         }
@@ -226,6 +226,10 @@ window.scene = createScene();};
         initFunction().then(() => {scene.then(returnedScene => { sceneToRender = returnedScene; });
                             
         });
+
+         // 下記の 2行で WebVR モードを選択することが出来るようになる
+         const vrHelper = scene.createDefaultVRExperience();
+        vrHelper.enableInteractions();
 
         // Resize
         window.addEventListener("resize", function () {
